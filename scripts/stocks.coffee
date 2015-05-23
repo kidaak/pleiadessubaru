@@ -8,7 +8,7 @@ request = require 'request'
 cheerio = require 'cheerio'
 
 module.exports = (robot) ->
-  robot.respond /stock (.*)/i, (msg) ->
+  robot.respond /stocks (.*)/i, (msg) ->
     code = msg.match[1]
     options =
       url: 'http://stocks.finance.yahoo.co.jp/stocks/detail/?code=' + code
